@@ -1,0 +1,7 @@
+[build]
+  publish = "public"
+  command = "hugo --gc --minify"
+
+[context.production.environment]
+  # Gunakan versi Hugo yang baru Anda install
+  HUGO_VERSION = "0.150.1"

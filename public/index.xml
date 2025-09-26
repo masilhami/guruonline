@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 27 Sep 2025 05:26:41 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>5000 Dapur Fiktif Terbongkar Nurhadi</title>
+      <link>http://localhost:1313/posts/5000-dapur-fiktif-terbongkar-nurhadi/</link>
+      <pubDate>Sat, 27 Sep 2025 05:26:41 +0700</pubDate>
+      <guid>http://localhost:1313/posts/5000-dapur-fiktif-terbongkar-nurhadi/</guid>
+      <description>&lt;p&gt;Anggota Komisi IX DPR RI, Nurhadi, menyingkap dugaan adanya sekitar 5.000 titik dapur Program Makan Bergizi Gratis (MBG) melalui Satuan Pelayanan Pemenuhan Gizi (SPPG) yang ternyata fiktif. Ia meminta Badan Gizi Nasional (BGN) memperketat mekanisme verifikasi agar kasus serupa tidak terulang.&lt;/p&gt;&#xA;&lt;p&gt;Pernyataan itu ia sampaikan dalam rapat kerja Komisi IX bersama BGN pada Senin (15/9/2025). Nurhadi menyebutkan sebelumnya pernah melaporkan adanya praktik penjualan lokasi titik dapur MBG oleh oknum tertentu kepada BGN.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
