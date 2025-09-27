@@ -1,70 +1,45 @@
 /* =======================================
-   Perbaikan Akhir CSS (Logo, Spasi, dan Menu Desktop)
+   Custom CSS untuk Tema Newsroom (guruonline.web.id)
+   - REVISI AKHIR: MEMPERTAHANKAN ICON HAMBURGER
    ======================================= */
 
-/* --- Bagian 1: Logo & Spasi --- */
+/* --- Bagian 1: Kustomisasi Logo & Spasi (Final) --- */
 
-/* Mengatasi width="130px" di header.html dan menetapkan ukuran ideal */
-header nav a img {
+/* Menyesuaikan logo ke ukuran yang proporsional (70px) */
+header nav a img[src*="/images/logogo.png"] {
     max-height: 60px !important; 
-    width: auto !important; /* Wajib menimpa 130px */
+    width: auto !important;
     height: auto !important;
 }
 
-/* Spasi di bawah header */
+/* Solusi Spasi dengan Konten di bawah */
 header {
-    margin-bottom: 30px !important; 
+    margin-bottom: 30px !important; /* Spasi yang cukup lega */
 }
 
-/* --- Bagian 2: Memperbaiki Tampilan Menu Desktop --- */
-
+/* Mengatur agar logo dan ikon sejajar */
 @media (min-width: 992px) {
-    
-    /* 1. Menyembunyikan Ikon Mobile Toggle yang Rusak */
-    .nav_bar-wrap { 
-        display: none !important; /* Menyembunyikan ikon hamburger yang Anda lihat */
-    }
-    
-    /* 2. Memaksa Tampilan Menu Horizontal (Menggunakan .nav-body) */
-    .nav-body {
-        /* Memastikan menu tampil dan menghilangkan properti mobile */
-        display: flex !important;
-        opacity: 1 !important;
-        position: relative !important;
-        background: none !important;
-        width: auto !important;
-        min-height: auto !important;
-        padding: 0 !important;
-        z-index: auto !important;
-        top: auto !important;
-        right: auto !important;
-        
-        /* Gaya horizontal */
-        flex-direction: row !important;
-        align-items: center;
-        justify-content: flex-end;
-    }
-    
-    /* 3. Menata Link Menu */
-    .nav-body a.nav_item { /* Menargetkan setiap link menu */
-        margin-left: 20px !important;
-        padding: 0 !important;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: #333 !important;
-        display: block !important;
-    }
-    
-    /* 4. Menghilangkan Close Button dan Dark Mode Toggle di Desktop */
-    .nav-close, .color_mode {
-        display: none !important;
-    }
-    
-    /* 5. Mengatur Layout Header */
-    .nav-menu {
+    nav {
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
-        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
+}
+
+
+/* --- Bagian 2: Menghilangkan Konflik Tampilan --- */
+
+/* Menghilangkan semua aturan yang menyembunyikan tombol hamburger */
+.nav_bar-wrap-icon, 
+.menu-toggle-button,
+.menu-icon {  
+    /* Hapus display: none !important dari sini */
+    /* Kita biarkan fungsi mobile theme bawaan bekerja */
+}
+
+/* Hanya menyembunyikan toggle dark mode yang mengganggu */
+.color_mode {
+    display: none !important;
 }

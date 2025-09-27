@@ -9,4 +9,54 @@
   item = "Tentang Kami"
   weight = 20
 
-# ... Lanjutkan dengan semua menu Anda yang lain
+
+[menu]
+  # Gunakan weight yang unik dan berurutan untuk memastikan menu tampil.
+  # Angka yang lebih kecil tampil lebih dulu (kiri).
+  [[menu.main]]
+    identifier = "berita"
+    name = "Berita Terbaru"
+    url = "/posts/" 
+    weight = 10 
+
+  [[menu.main]]
+    identifier = "artikel"
+    name = "Artikel Terbaru"
+    url = "/artikel/"
+    weight = 20
+    
+  [[menu.main]]
+    identifier = "opini"
+    name = "Opini Terbaru"
+    url = "/opini/"
+    weight = 30
+    
+  [[menu.main]]
+    identifier = "kurikulum"
+    name = "Bedah Kurikulum"
+    url = "/kurikulum/"
+    weight = 40
+    
+  [[menu.main]]
+    identifier = "panduan"
+    name = "Tutorial/Panduan"
+    url = "/panduan/"
+    weight = 50
+    
+  [[menu.main]]
+    identifier = "bank-soal" # Ganti identifier dengan nama yang benar
+    name = "Kumpulan Soal"
+    url = "/bank-soal/" 
+    weight = 60
+    
+  [[menu.main]]
+    identifier = "tentang"
+    name = "Tentang Kami"
+    url = "/about/"
+    weight = 90 # Geser ke kanan
+    
+  [[menu.main]]
+    identifier = "kontak"
+    name = "Kontak"
+    url = "/contact/"
+    weight = 100 # Geser paling kanan
