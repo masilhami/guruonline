@@ -1,0 +1,39 @@
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Ambil URL Path Artikel saat ini
+    const urlPath = window.location.pathname;
+    const viewCounterElement = document.getElementById('page-views-counter');
+    
+    // Tampilkan "..." saat loading
+    if (viewCounterElement) {
+        viewCounterElement.innerText = '...'; 
+    }
+
+    // 2. Panggil Netlify Function
+    fetch('/.netlify/functions/get-views', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ urlPath: urlPath })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // 3. Update HTML dengan angka views
+        if (viewCounterElement && data.views) {
+            viewCounterElement.innerText = data.views;
+        } else if (viewCounterElement) {
+            viewCounterElement.innerText = '0'; // Tampilkan 0 jika views tidak ditemukan
+        }
+    })
+    .catch(error => {
+        console.error('Error fetching views:', error);
+        if (viewCounterElement) {
+            viewCounterElement.innerText = 'N/A'; // Tampilkan error
+        }
+    });
+});
+</script>
