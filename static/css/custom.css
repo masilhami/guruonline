@@ -41,3 +41,23 @@ nav {
 }
 
 /* KODE LAIN TERKAIT .nav_bar-wrap KITA HAPUS TOTAL */
+
+/* --- Penambahan Style untuk Metadata Artikel --- */
+
+/* Menata baris metadata */
+.post_meta {
+    font-size: 0.9em;
+    color: #666; /* Warna abu-abu yang lebih lembut */
+    margin-top: -10px; /* Sedikit naik agar dekat dengan judul */
+    margin-bottom: 25px; /* Tambahkan ruang yang cukup di bawah metadata */
+}
+
+/* Menguatkan atau membedakan bagian penulis dan jumlah pembaca */
+.post_meta strong {
+    color: #333; /* Warna lebih gelap untuk nama penulis */
+    font-weight: 500;
+}
+.post_meta .views-count {
+    color: #cc0000; /* Warna yang berbeda untuk menarik perhatian */
+    font-weight: bold;
+}

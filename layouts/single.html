@@ -1,29 +1,38 @@
 {{ define "main" }}
   <div class="wrap mt post">
     <div>
-      {{- $date := (dateFormat "02. January 2006" .Date) -}}
-      <p class="post_date">{{ $date }}</p>
-      
+      {{- $date := (dateFormat "02 January 2006" .Date) -}}
       <h1 class="post_title">{{ .Title }}</h1>
-      <p class="post_meta">
-          Oleh: **{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}** &middot; Tanggal: {{ $date }} 
-          &middot; **Jumlah Pembaca:** <span id="page-views-counter">999</span>
-      </p>
+      
+      <div class="post_meta_wrap" style="
+          font-size: 0.9em; 
+          color: #666; 
+          margin-top: -10px; 
+          margin-bottom: 25px; 
+          border-bottom: 1px solid #eee; 
+          padding-bottom: 15px;">
+          
+          <p style="margin: 0;">
+              Oleh: <span style="color: #333; font-weight: bold;">{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</span> 
+              &middot; **Jumlah Pembaca:** <span id="page-views-counter" class="views-count" style="font-weight: bold; color: #cc0000;">999</span>
+          </p>
+      </div>
       <div class="post_body">
         <div class="post_inner">
           {{ $image := partial "func/getImage" . }}
           {{ with .Params.image }}
             <img src="{{ $image }}" alt="{{ . }}" class="post_thumbnail">
           {{ end }}
+          
           {{ .Content }}
         </div>
         
-        <div class="post_extra mb-2">
-          </div>
-        
-        <div class="share-area">
+        <div class="share-area" style="margin-top: 30px;">
             {{ partial "share-buttons.html" . }}
         </div>
+        
+        <div class="post_extra mb-2"></div>
+        
         <div>
           {{ template "_internal/disqus.html" . }}
         </div>
