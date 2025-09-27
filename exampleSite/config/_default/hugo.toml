@@ -6,43 +6,42 @@ disqusShortname = "guru-online"
 
 [params]
   logo = "/images/logogo.png"
- # Daftar SEMUA folder konten yang ingin Anda tampilkan di Homepage
-  mainSections = ["posts", "kurikulum", "opini", "artikel", "panduan", "bank-soal"]
+ 
 [menu]
   [[menu.main]]
     identifier = "berita"
     name = "Berita Terbaru"
-    url = "/posts/"
+    url = "/posts/berita"
     weight = 10 
 
   [[menu.main]]
     identifier = "artikel"
     name = "Artikel Terbaru"
-    url = "/artikel/"
+    url = "posts/artikel/"
     weight = 20
     
   [[menu.main]]
     identifier = "opini"
     name = "Opini Terbaru"
-    url = "/opini/"
+    url = "posts/opini/"
     weight = 30
     
   [[menu.main]]
     identifier = "kurikulum"
     name = "Bedah Kurikulum"
-    url = "/kurikulum/"
+    url = "posts/kurikulum/"
     weight = 40
     
   [[menu.main]]
     identifier = "panduan"
     name = "Tutorial/Panduan"
-    url = "/panduan/"
+    url = "posts/panduan/"
     weight = 50
     
   [[menu.main]]
     identifier = "bank-soal" 
     name = "Kumpulan Soal"
-    url = "/bank-soal/"
+    url = "posts/bank-soal/"
     weight = 60
     
   [[menu.main]]
