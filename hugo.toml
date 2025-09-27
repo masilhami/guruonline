@@ -1,59 +1,59 @@
-baseURL = "https://guruonline.web.id/"
+baseURL = "https://www.guruonline.web.id/"
 languageCode = "id-id"
 title = "Media Online Guru Indonesia"
 theme = "newsroom"
-disqusShortname = "guru-online"
+disqusShortname = "guru-online" # Pastikan shortname Disqus Anda hanya "guru-online" tanpa tanda kutip
 
 [params]
-  # Tentukan path logo Anda. Path dimulai dari folder 'static'.
-  # Jika logo ada di /static/images/logo-guru.png, maka pathnya adalah /images/logo-guru.png
   logo = "/images/logogo.png"
-  
+
 [menu]
+  # Gunakan weight yang unik dan berurutan untuk memastikan menu tampil.
+  # Angka yang lebih kecil tampil lebih dulu (kiri).
+  [[menu.main]]
+    identifier = "berita"
+    name = "Berita Terbaru"
+    url = "/posts/" 
+    weight = 10 
+
+  [[menu.main]]
+    identifier = "artikel"
+    name = "Artikel Terbaru"
+    url = "/artikel/"
+    weight = 20
+    
+  [[menu.main]]
+    identifier = "opini"
+    name = "Opini Terbaru"
+    url = "/opini/"
+    weight = 30
+    
+  [[menu.main]]
+    identifier = "kurikulum"
+    name = "Bedah Kurikulum"
+    url = "/kurikulum/"
+    weight = 40
+    
+  [[menu.main]]
+    identifier = "panduan"
+    name = "Tutorial/Panduan"
+    url = "/panduan/"
+    weight = 50
+    
+  [[menu.main]]
+    identifier = "bank-soal" # Ganti identifier dengan nama yang benar
+    name = "Kumpulan Soal"
+    url = "/bank-soal/" 
+    weight = 60
+    
   [[menu.main]]
     identifier = "tentang"
     name = "Tentang Kami"
-    url = "/about/"           # URL tujuan (Asumsi Anda punya halaman /about/index.md)
-    weight = 20
-
+    url = "/about/"
+    weight = 90 # Geser ke kanan
+    
   [[menu.main]]
     identifier = "kontak"
     name = "Kontak"
     url = "/contact/"
-    weight = 30  
-	
-  [[menu.main]]
-    identifier = "berita"      # ID unik untuk item menu
-    name = "Berita Terbaru"    # Teks yang akan ditampilkan
-    url = "/posts/"            # URL tujuan (halaman daftar postingan)
-    weight = 10                # Urutan (semakin kecil angkanya, semakin kiri)
-
-  [[menu.main]]
-    identifier = "artikel"      # ID unik untuk item menu
-    name = "Artikel Terbaru"    # Teks yang akan ditampilkan
-    url = "/artikel/"            # URL tujuan (halaman daftar postingan)
-    weight = 10                # Urutan (semakin kecil angkanya, semakin kiri)	
-	
-  [[menu.main]]
-    identifier = "opini"      # ID unik untuk item menu
-    name = "opini Terbaru"    # Teks yang akan ditampilkan
-    url = "/opini/"            # URL tujuan (halaman daftar postingan)
-    weight = 10                # Urutan (semakin kecil angkanya, semakin kiri)	
-	
-  [[menu.main]]
-    identifier = "kurikulum"      # ID unik untuk item menu
-    name = "Bedah Kurikulum"    # Teks yang akan ditampilkan
-    url = "/kurikulum/"            # URL tujuan (halaman daftar postingan)
-    weight = 10                # Urutan (semakin kecil angkanya, semakin kiri)	
-	
-  [[menu.main]]
-    identifier = "panduan"      # ID unik untuk item menu
-    name = "Tutorial/Panduan"    # Teks yang akan ditampilkan
-    url = "/panduan/"            # URL tujuan (halaman daftar postingan)
-    weight = 10                # Urutan (semakin kecil angkanya, semakin kiri)	
-	
-  [[menu.main]]
-    identifier = "benk-soal"      # ID unik untuk item menu
-    name = "Kumpulan Soal"    # Teks yang akan ditampilkan
-    url = "/bank-soal/"            # URL tujuan (halaman daftar postingan)
-    weight = 10                # Urutan (semakin kecil angkanya, semakin kiri)	
+    weight = 100 # Geser paling kanan
