@@ -1,5 +1,19 @@
-/* Mengatasi ukuran logo yang terlalu kecil */
-header .logo img {
-    max-height: 50px !important; /* Ganti dengan ukuran yang Anda inginkan */
+/* Selektor yang sangat spesifik berdasarkan struktur Anda */
+header nav img[src*="logogo.png"] {
+    /* Menimpa inline-style dan CSS tema */
+    width: 200px !important; /* Ganti dengan lebar yang Anda inginkan */
+    max-height: 80px !important; /* Tinggi maksimal */
+    height: auto !important;
+}
+
+/* Menimpa width yang ada di tag a atau img */
+img[width="130px"] {
     width: auto !important;
+}
+
+/* Memaksa menu agar selalu terlihat di desktop */
+@media (min-width: 992px) { /* Angka ini disesuaikan dengan breakpoint tema Newsroom */
+    nav.menu {
+        display: block !important;
+    }
 }
