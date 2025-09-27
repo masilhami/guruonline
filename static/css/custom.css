@@ -7,14 +7,14 @@
 
 /* Menyesuaikan logo ke ukuran yang proporsional (70px) */
 header nav a img[src*="/images/logogo.png"] {
-    max-height: 60px !important; 
+    max-height: 70px !important; 
     width: auto !important;
     height: auto !important;
 }
 
 /* Solusi Spasi: Menambahkan margin bawah pada kontainer header */
 header {
-    margin-bottom: 40px !important; 
+    margin-bottom: 35px !important; 
 }
 nav {
     padding-bottom: 0 !important;
