@@ -11,37 +11,37 @@ disqusShortname = "guru-online"
   [[menu.main]]
     identifier = "berita"
     name = "Berita Terbaru"
-    url = "/posts/berita"
+    url = "/berita/"
     weight = 10 
 
   [[menu.main]]
     identifier = "artikel"
     name = "Artikel Terbaru"
-    url = "posts/artikel/"
+    url = "/artikel/"
     weight = 20
     
   [[menu.main]]
     identifier = "opini"
     name = "Opini Terbaru"
-    url = "posts/opini/"
+    url = "/opini/"
     weight = 30
     
   [[menu.main]]
     identifier = "kurikulum"
     name = "Bedah Kurikulum"
-    url = "posts/kurikulum/"
+    url = "/kurikulum/"
     weight = 40
     
   [[menu.main]]
     identifier = "panduan"
     name = "Tutorial/Panduan"
-    url = "posts/panduan/"
+    url = "/panduan/"
     weight = 50
     
   [[menu.main]]
     identifier = "bank-soal" 
     name = "Kumpulan Soal"
-    url = "posts/bank-soal/"
+    url = "/bank-soal/"
     weight = 60
     
   [[menu.main]]
