@@ -2,15 +2,12 @@ baseURL = "https://www.guruonline.web.id/"
 languageCode = "id-id"
 title = "Media Online Guru Indonesia"
 theme = "newsroom"
-disqusShortname = "guru-online" # Pastikan shortname Disqus Anda hanya "guru-online"
+disqusShortname = "guru-online" 
 
 [params]
   logo = "/images/logogo.png"
 
 [menu]
-  # Menggunakan weight yang unik dan berurutan.
-  # Item dengan weight yang sama akan diurutkan berdasarkan alphabet.
-  
   [[menu.main]]
     identifier = "berita"
     name = "Berita Terbaru"
