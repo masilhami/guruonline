@@ -1,47 +1,46 @@
 /* =======================================
    Custom CSS untuk Tema Newsroom (guruonline.web.id)
-   - Diimplementasikan di: static/css/custom.css
+   - Revisi Akhir Logo dan Menu
    ======================================= */
 
-/* --- Bagian 1: Kustomisasi Logo (Prioritas Tinggi) --- */
+/* --- Bagian 1: Kustomisasi Logo (Tinggi Ekstrem) --- */
 
-/* **SOLUSI LOGO:** Mengatasi logo lebar dengan memaksa TINGGI MAXIMAL dan menimpa lebar bawaan (width: 130px) */
+/* SOLUSI LOGO: Menaikkan tinggi maksimal (max-height) untuk mengatasi penimpaan tema */
 header nav a img[src*="/images/logogo.png"] {
-    /* Set Tinggi Maksimal 80px agar logo Anda terlihat besar dan jelas */
-    max-height: 80px !important; 
+    /* Meningkatkan tinggi maksimal secara signifikan agar logo terlihat besar */
+    max-height: 120px !important; 
     
-    /* Memastikan lebar meregang proporsional dan menimpa inline-style */
+    /* Memastikan lebar meregang secara proporsional dan menimpa width="130px" bawaan */
     width: auto !important;
     height: auto !important;
 }
 
 
-/* --- Bagian 2: Kustomisasi Menu Navbar --- */
+/* --- Bagian 2: Kustomisasi Menu Navbar (Menampilkan di Desktop) --- */
 
-/* Ini untuk memastikan menu selalu terlihat di desktop (non-mobile) */
-/* Breakpoint 992px adalah standar. */
+/* Breakpoint 992px standar untuk desktop. */
 @media (min-width: 992px) {
-    /* A. Memaksa Kontainer Navigasi (Logo & Menu) untuk Tampil Rapi */
-    /* Berdasarkan inspeksi, ini adalah tag <nav> yang membungkus semua */
+    /* A. Memaksa Container Navigasi (Nav) agar terlihat rapi */
     nav {
         display: flex !important;
         justify-content: space-between; /* Pisahkan logo dan menu */
         align-items: center;
+        padding-top: 10px; /* Tambahkan sedikit padding atas untuk ruang logo */
+        padding-bottom: 10px;
     }
     
-    /* B. Memaksa Container Menu Utama (nav_bar-wrap) agar terlihat */
-    .nav_bar-wrap { 
+    /* B. Memaksa Container Menu Utama (.nav_bar-wrap) agar terlihat */
+    .nav_bar-wrap {  
         display: flex !important;
-        /* Ganti flex-end jika Anda ingin menu rata kiri */
         justify-content: flex-end; 
         align-items: center;
         width: auto !important; 
     }
     
     /* C. Menata Item Menu Individu */
-    .nav_bar-wrap ul { /* Menargetkan daftar menu */
+    .nav_bar-wrap ul { 
         display: flex !important;
-        list-style: none !important; 
+        list-style: none !important;  
         margin: 0 !important;
         padding: 0 !important;
     }
@@ -52,7 +51,7 @@ header nav a img[src*="/images/logogo.png"] {
     }
 
     .nav_bar-wrap ul li a {
-        color: #333 !important; 
+        color: #333 !important;  
         text-decoration: none !important; 
         font-weight: bold !important;
         text-transform: uppercase;
@@ -60,12 +59,7 @@ header nav a img[src*="/images/logogo.png"] {
     
     /* E. Menyembunyikan Tombol Hamburger di Desktop */
     .menu-toggle-button,
-    .menu-icon { 
+    .menu-icon {  
         display: none !important;
     }
 }
-
-/* --- Bagian 3: Contoh Font Global (Opsional) --- */
-/* body {
-    font-family: 'Arial', sans-serif !important;
-} */
