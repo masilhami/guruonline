@@ -2,6 +2,6 @@ baseURL = "https://guruonline.web.id/"
 languageCode = "id-id"
 title = "Media Online Guru Indonesia"
 theme = "newsroom"
-disqusShortname = "disqus_zDuAHiZqBO"
+disqusShortname = "guru-online"
 
 # Jika Anda memiliki parameter lain (seperti menu, social, dll.), tambahkan di bawah sini.
