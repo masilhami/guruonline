@@ -1,0 +1,16 @@
+{
+  "name": "guru-online-functions",
+  "version": "1.0.0",
+  "description": "Netlify Functions for Hugo site",
+  "main": "get-views.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-analytics/data": "^4.12.1",
+    "dotenv": "^16.6.1"
+  }
+}

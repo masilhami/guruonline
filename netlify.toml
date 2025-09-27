@@ -1,6 +1,12 @@
 [build]
   publish = "public"
   command = "hugo --gc --minify --buildFuture"
+  functions = "functions" # Folder tempat fungsi berada
+  
+ [[headers]]
+  for = "/.netlify/functions/get-views"
+  [headers.values]
+    Access-Control-Allow-Origin = "*" 
 
 [context.production.environment]
   # Gunakan versi Hugo yang baru Anda install
