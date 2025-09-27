@@ -5,12 +5,13 @@
 
 /* --- Bagian 1: Kustomisasi Logo (Tinggi Ekstrem) --- */
 
-/* SOLUSI LOGO: Menaikkan tinggi maksimal (max-height) untuk mengatasi penimpaan tema */
+/* SOLUSI LOGO: Mengatasi logo lebar dengan memaksa TINGGI MAXIMAL 
+   Menargetkan elemen IMG dengan attribut SRC untuk kekuatan tertinggi. */
 header nav a img[src*="/images/logogo.png"] {
-    /* Meningkatkan tinggi maksimal secara signifikan agar logo terlihat besar */
-    max-height: 120px !important; 
+    /* Meningkatkan tinggi maksimal secara ekstrem untuk menimpa semua aturan tema */
+    max-height: 150px !important; 
     
-    /* Memastikan lebar meregang secara proporsional dan menimpa width="130px" bawaan */
+    /* Memastikan lebar meregang proporsional dan menimpa width="130px" bawaan */
     width: auto !important;
     height: auto !important;
 }
@@ -20,12 +21,12 @@ header nav a img[src*="/images/logogo.png"] {
 
 /* Breakpoint 992px standar untuk desktop. */
 @media (min-width: 992px) {
-    /* A. Memaksa Container Navigasi (Nav) agar terlihat rapi */
+    /* A. Memaksa Kontainer Navigasi (Nav) agar terlihat rapi */
     nav {
         display: flex !important;
         justify-content: space-between; /* Pisahkan logo dan menu */
         align-items: center;
-        padding-top: 10px; /* Tambahkan sedikit padding atas untuk ruang logo */
+        padding-top: 10px; /* Memberi ruang di atas logo */
         padding-bottom: 10px;
     }
     
@@ -34,13 +35,13 @@ header nav a img[src*="/images/logogo.png"] {
         display: flex !important;
         justify-content: flex-end; 
         align-items: center;
-        width: auto !important; 
+        width: auto !important;  
     }
     
     /* C. Menata Item Menu Individu */
     .nav_bar-wrap ul { 
         display: flex !important;
-        list-style: none !important;  
+        list-style: none !important; 
         margin: 0 !important;
         padding: 0 !important;
     }
@@ -51,7 +52,7 @@ header nav a img[src*="/images/logogo.png"] {
     }
 
     .nav_bar-wrap ul li a {
-        color: #333 !important;  
+        color: #333 !important; 
         text-decoration: none !important; 
         font-weight: bold !important;
         text-transform: uppercase;
