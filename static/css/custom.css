@@ -61,3 +61,9 @@ nav {
     color: #cc0000; /* Warna yang berbeda untuk menarik perhatian */
     font-weight: bold;
 }
+
+/* Menyembunyikan tautan duplikat "Latest Posts" yang disuntikkan oleh JavaScript */
+/* Kita hanya menyembunyikan yang kedua (duplikat) */
+.post_nav:nth-of-type(2) { 
+    display: none !important; 
+}
