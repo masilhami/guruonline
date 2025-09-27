@@ -1,19 +1,72 @@
-/* Selektor yang sangat spesifik berdasarkan struktur Anda */
-header nav img[src*="logogo.png"] {
-    /* Menimpa inline-style dan CSS tema */
-    width: 200px !important; /* Ganti dengan lebar yang Anda inginkan */
-    max-height: 80px !important; /* Tinggi maksimal */
+/* =======================================
+   Custom CSS untuk Tema Newsroom (guruonline.web.id)
+   ======================================= */
+
+/* --- Bagian 1: Kustomisasi Logo --- */
+
+/* Menargetkan gambar logo secara spesifik dengan path-nya */
+/* Ini akan menimpa atribut width="130px" yang ada di HTML */
+header nav a img[src*="/images/logogo.png"] {
+    width: 150px !important;    /* Atur lebar yang Anda inginkan (misal: 150px) */
+    max-height: 70px !important; /* Atur tinggi maksimal agar tidak merusak tata letak */
+    height: auto !important;     /* Pertahankan rasio aspek gambar */
+}
+
+/* Jika tema menggunakan ID atau Class yang lebih umum untuk logo di dalam header,
+   Anda bisa menggunakan ini sebagai alternatif atau tambahan:
+.site-branding img {
+    width: 150px !important;
+    max-height: 70px !important;
     height: auto !important;
 }
+*/
 
-/* Menimpa width yang ada di tag a atau img */
-img[width="130px"] {
-    width: auto !important;
-}
 
-/* Memaksa menu agar selalu terlihat di desktop */
-@media (min-width: 992px) { /* Angka ini disesuaikan dengan breakpoint tema Newsroom */
-    nav.menu {
-        display: block !important;
+/* --- Bagian 2: Kustomisasi Menu Navbar --- */
+
+/* Ini untuk memastikan menu selalu terlihat di desktop (non-mobile) */
+/* Sesuaikan breakpoint (992px) jika tema Newsroom menggunakan angka yang berbeda */
+@media (min-width: 992px) {
+    /* Menargetkan container menu utama */
+    .nav_bar-wrap { /* Ini adalah class container <nav> Anda dari inspeksi HTML */
+        display: flex !important; /* Memaksa tampilan flexbox untuk item menu */
+        justify-content: flex-end; /* Menggeser menu ke kanan */
+        align-items: center;
+        width: auto !important; /* Memastikan navbar mengambil lebar yang dibutuhkan */
+    }
+
+    /* Ini menargetkan daftar item menu jika ada */
+    .nav_bar-wrap ul.menu { /* Ganti 'ul.menu' jika class menu Anda berbeda */
+        display: flex !important;
+        list-style: none !important; /* Hapus bullet point */
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Menata item menu individu */
+    .nav_bar-wrap ul.menu li {
+        margin-left: 20px !important; /* Spasi antar item menu */
+    }
+
+    /* Mengatur link menu */
+    .nav_bar-wrap ul.menu li a {
+        color: #333 !important; /* Warna teks menu */
+        text-decoration: none !important; /* Hapus garis bawah */
+        font-weight: bold !important; /* Bold teks menu */
+    }
+
+    /* Jika ada tombol hamburger (toggle menu) di desktop, sembunyikan */
+    .menu-toggle-button { /* Ganti dengan class tombol hamburger yang benar */
+        display: none !important;
     }
 }
+
+/* --- Bagian 3: Contoh Font Global (Opsional) --- */
+/* body {
+    font-family: Arial, sans-serif !important;
+} */
+
+/* --- Bagian 4: Contoh Warna Teks Global (Opsional) --- */
+/* p {
+    color: #444 !important;
+} */
