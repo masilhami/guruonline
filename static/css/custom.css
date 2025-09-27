@@ -1,6 +1,6 @@
 /* =======================================
    Custom CSS untuk Tema Newsroom (guruonline.web.id)
-   - REVISI AKHIR: SPASI DAN TAMPILAN MENU
+   - SOLUSI AKHIR (SPASI & TAMPILAN MENU)
    ======================================= */
 
 /* --- Bagian 1: Kustomisasi Logo & Spasi (Final) --- */
@@ -13,12 +13,11 @@ header nav a img[src*="/images/logogo.png"] {
 }
 
 /* 1. SOLUSI SPASI DENGAN KONTEN DI BAWAH */
-/* Targetkan elemen nav atau header untuk memberikan spasi (margin-bottom) */
-header { /* Menargetkan elemen header utama untuk spasi */
-    margin-bottom: 35px !important; /* Spasi 30px agar cukup lega */
+header {
+    margin-bottom: 40px !important; /* Spasi yang cukup lega */
 }
 nav {
-    padding-bottom: 0 !important; /* Hapus padding yang mungkin menumpuk */
+    padding-bottom: 0 !important;
 }
 
 
@@ -33,28 +32,36 @@ nav {
         padding-top: 15px;
         padding-bottom: 15px;
         width: 100%;
+        margin-bottom: 0 !important;
     }
     
     /* B. Memaksa Container Menu (.nav_bar-wrap) agar terlihat */
     .nav_bar-wrap {  
-        /* SOLUSI MENU: Paksa tampil, hilangkan posisi mobile */
         display: flex !important; 
         position: relative !important;
-        
         justify-content: flex-end; 
         align-items: center;
         width: auto !important;  
     }
     
-    /* C. Menata Item Menu Individu */
-    .nav_bar-wrap ul {  
-        display: flex !important;
-        list-style: none !important;  
+    /* C. SOLUSI MENU: Memaksa Daftar UL (Unordered List) Menu Tampil Berjejer */
+    /* Tambahkan selector kuat untuk daftar menu yang berisi tautan Anda */
+    .nav-body ul { /* Menargetkan daftar menu jika ada class nav-body */
+        display: flex !important; 
+        list-style: none !important;
         margin: 0 !important;
         padding: 0 !important;
-        flex-direction: row !important; 
+        flex-direction: row !important;
     }
-
+    
+    /* Tambahan: Pastikan semua turunan li dan a di dalam ul juga terlihat */
+    .nav-body ul li {
+        display: block !important;
+    }
+    .nav-body ul li a {
+        display: block !important;
+    }
+    
     /* D. Mengatur Item Menu dan Link */
     .nav_bar-wrap ul li {
         margin-left: 20px !important;  
@@ -66,16 +73,10 @@ nav {
         text-transform: uppercase;
     }
     
-    /* E. SOLUSI IKON HAMBURGER RUSAK (Menyembunyikan sisa-sisa ikon) */
-    /* Targetkan semua elemen yang berpotensi menjadi ikon rusak dan sembunyikan di desktop */
-    .nav_bar-wrap > *, /* Sembunyikan semua turunan langsung dari nav_bar-wrap (termasuk ikon) */
+    /* E. Menyembunyikan Ikon yang Rusak di Desktop */
     .nav_bar-wrap-icon, 
-    .menu-toggle-button {  
+    .menu-toggle-button,
+    .menu-icon {  
         display: none !important;
-    }
-    
-    /* F. Tampilkan kembali daftar UL yang disembunyikan (untuk menu) */
-    .nav_bar-wrap ul {
-        display: flex !important; 
     }
 }
