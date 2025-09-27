@@ -8,23 +8,23 @@
       <h1 class="post_title">{{ .Title }}</h1>
       
       <div class="post_meta_wrap" style="
-          font-size: 0.9em; 
-          color: #666; 
-          margin-top: -10px; 
-          margin-bottom: 25px; 
-          border-bottom: 1px solid #eee; 
-          padding-bottom: 15px;
-          display: flex; 
-          justify-content: space-between;">
-          
-          <p style="margin: 0;">
-              Oleh: <span style="color: #333; font-weight: bold;">{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</span> 
-              &middot; Jumlah Pembaca: <span id="page-views-counter" class="views-count" style="font-weight: bold; color: #cc0000;">N/A</span>
-          </p>
-          
-          <div class="share-area-inline">
-              {{ partial "share-buttons.html" . }}
-          </div>
+    font-size: 0.9em; 
+    color: #666; 
+    margin-top: -10px; 
+    margin-bottom: 25px; 
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 15px;">
+    
+    <div class="post_meta_flex_container"> <p style="margin: 0;">
+            Oleh: <span style="color: #333; font-weight: bold;">{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</span> 
+            &middot; Jumlah Pembaca: <span id="page-views-counter" class="views-count" style="font-weight: bold; color: #cc0000;">N/A</span>
+        </p>
+        
+        <div class="share-area-inline">
+            {{ partial "share-buttons.html" . }}
+        </div>
+    </div>
+</div>
       </div>
       <div class="post_body">
         <div class="post_inner">

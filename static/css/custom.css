@@ -96,3 +96,23 @@ nav {
     padding-top: 0 !important; 
     border-top: none !important;
 }
+
+/* --- Perbaikan Responsif Metadata --- */
+
+/* Aturan ini hanya berlaku untuk layar desktop */
+@media (min-width: 992px) {
+    /* Menerapkan Flexbox hanya pada kontainer metadata baru */
+    .post_meta_flex_container {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center;
+        width: 100%;
+    }
+    
+    /* Memastikan tombol share sejajar di kanan pada desktop */
+    .share-area-inline {
+        margin-left: auto; /* Dorong ke kanan */
+    }
+    
+    /* Sisa kode navbar Anda ... */
+}
