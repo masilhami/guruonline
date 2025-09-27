@@ -8,27 +8,23 @@
       <h1 class="post_title">{{ .Title }}</h1>
       
       <div class="post_meta_wrap" style="
-    font-size: 0.9em; 
-    color: #666; 
-    margin-top: -10px; 
-    margin-bottom: 25px; 
-    border-bottom: 1px solid #eee; 
-    padding-bottom: 15px;
-    display: flex; /* WAJIB: Mengaktifkan Flexbox untuk perataan */
-    justify-content: space-between;"> <p style="margin: 0;">
-        Oleh: <span style="color: #333; font-weight: bold;">{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</span> 
-        &middot; Jumlah Pembaca: <span id="page-views-counter" class="views-count" style="font-weight: bold; color: #cc0000;">999</span>
-    </p>
-    
-    <div class="share-area-inline">
-        {{ partial "share-buttons.html" . }}
-    </div>
-</div>
+          font-size: 0.9em; 
+          color: #666; 
+          margin-top: -10px; 
+          margin-bottom: 25px; 
+          border-bottom: 1px solid #eee; 
+          padding-bottom: 15px;
+          display: flex; 
+          justify-content: space-between;">
           
           <p style="margin: 0;">
               Oleh: <span style="color: #333; font-weight: bold;">{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</span> 
-              &middot; Jumlah Pembaca: <span id="page-views-counter" class="views-count" style="font-weight: bold; color: #cc0000;">999</span>
+              &middot; Jumlah Pembaca: <span id="page-views-counter" class="views-count" style="font-weight: bold; color: #cc0000;">N/A</span>
           </p>
+          
+          <div class="share-area-inline">
+              {{ partial "share-buttons.html" . }}
+          </div>
       </div>
       <div class="post_body">
         <div class="post_inner">
@@ -40,7 +36,6 @@
           {{ .Content }}
         </div>
         
-               
         <div class="post_extra mb-2"></div>
         
         <div>
@@ -49,7 +44,13 @@
       </div>
     </div>
     
-    
-  {{ partial "fetch-views-script.html" . }}
-  
+    <a href={{ absURL "" }} class="post_nav"><span class="post_next">{{ T "latest_posts" }}
+      <svg class="icon icon_scale">
+        <use xlink:href="#double-arrow"></use>
+      </svg>
+    </span></a>
+  </div>
+
+  {{ partial "fetch-views-script.html" . }} 
+
 {{ end }}
