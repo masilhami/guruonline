@@ -6,7 +6,8 @@ disqusShortname = "guru-online"
 
 [params]
   logo = "/images/logogo.png"
-
+ # Daftar SEMUA folder konten yang ingin Anda tampilkan di Homepage
+  mainSections = ["posts", "kurikulum", "opini", "artikel", "panduan", "bank-soal"]
 [menu]
   [[menu.main]]
     identifier = "berita"
