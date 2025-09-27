@@ -1,9 +1,9 @@
-+++
+---
 title = 'Belajar Lebih Menyenangkan dengan Deep Learning di Sekolah'
 date = 2025-09-27T16:09:14+07:00
 draft = false
-image= "images/menyenangkan.jpg
-+++
+image= "images/menyenangkan.jpg"
+---
 Kota Pekalongan tengah menatap perubahan besar dalam dunia pendidikan dengan hadirnya pendekatan deep learning. Dinas Pendidikan Kota Pekalongan menegaskan bahwa konsep ini bukanlah kurikulum baru, melainkan sebuah filosofi belajar yang menuntun arah strategi hingga penerapan di ruang kelas.
 
 “Deep learning itu bukan kurikulum, melainkan pendekatan. Filosofinya dituangkan ke dalam strategi, lalu diterapkan di kelas. Kurikulum tetap sama, hanya saja materinya lebih sederhana,” jelas Plt. Kepala Dinas Pendidikan Kota Pekalongan, Mabruri, beberapa waktu lalu.
