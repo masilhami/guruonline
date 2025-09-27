@@ -1,11 +1,11 @@
 /* =======================================
    Custom CSS untuk Tema Newsroom (guruonline.web.id)
-   - REVISI AKHIR: PEMULIHAN FUNGSI HAMBURGER
+   - REVISI AKHIR: FIX FOOTER TERBALIK DAN SPASI LOGO
    ======================================= */
 
 /* --- Bagian 1: Kustomisasi Logo & Spasi (Final) --- */
 
-/* 1. Menyesuaikan logo ke ukuran yang proporsional (70px) */
+/* 1. Menyesuaikan logo ke ukuran yang proporsional (60px) */
 header nav a img[src*="/images/logogo.png"] {
     max-height: 60px !important; 
     width: auto !important;
@@ -40,30 +40,46 @@ nav {
     display: none !important;
 }
 
-/* KODE LAIN TERKAIT .nav_bar-wrap KITA HAPUS TOTAL */
-
-/* --- Penambahan Style untuk Metadata Artikel --- */
+/* --- Bagian 3: Styling Metadata Artikel --- */
 
 /* Menata baris metadata */
 .post_meta {
     font-size: 0.9em;
-    color: #666; /* Warna abu-abu yang lebih lembut */
-    margin-top: -10px; /* Sedikit naik agar dekat dengan judul */
-    margin-bottom: 25px; /* Tambahkan ruang yang cukup di bawah metadata */
+    color: #666; 
+    margin-top: -10px; 
+    margin-bottom: 25px; 
 }
 
 /* Menguatkan atau membedakan bagian penulis dan jumlah pembaca */
 .post_meta strong {
-    color: #333; /* Warna lebih gelap untuk nama penulis */
+    color: #333; 
     font-weight: 500;
 }
 .post_meta .views-count {
-    color: #cc0000; /* Warna yang berbeda untuk menarik perhatian */
+    color: #cc0000; 
     font-weight: bold;
 }
 
-/* Menyembunyikan tautan duplikat "Latest Posts" yang disuntikkan oleh JavaScript */
+
+/* --- Bagian 4: FIX FOOTER TERBALIK & DUPLIKASI (PENTING) --- */
+
+/* 1. Menyembunyikan tautan duplikat "Latest Posts" yang disuntikkan oleh JavaScript */
 /* Kita hanya menyembunyikan yang kedua (duplikat) */
 .post_nav:nth-of-type(2) { 
     display: none !important; 
+}
+
+/* 2. Memperbaiki urutan footer terbalik yang disebabkan oleh JS */
+/* Menggunakan Flexbox untuk memastikan elemen diletakkan di tempat yang benar */
+.footer {
+    display: flex !important;
+    flex-direction: column-reverse !important; /* Mebalik urutan agar copyright di atas */
+    text-align: center;
+    padding-top: 10px;
+}
+.post_nav:nth-of-type(1) {
+    order: 2 !important; /* Paksa Latest Posts ke bawah */
+}
+.footer p:nth-of-type(1) {
+    order: 1 !important; /* Paksa Copyright ke atas */
 }
