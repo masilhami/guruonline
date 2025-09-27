@@ -1,9 +1,10 @@
 +++
-title = '5000 Dapur Fiktif Terbongkar Nurhadi'
+title = '5.000 Dapur Fiktif Terbongkar! Nurhadi Bongkar Celah Bisnis Gelap di Program Makan Bergizi Gratis'
 date = 2025-09-27T05:26:41+07:00
 draft = false
 image= "/images/dapur.jpg"
 +++
+
 
 
 Anggota Komisi IX DPR RI, Nurhadi, menyingkap dugaan adanya sekitar 5.000 titik dapur Program Makan Bergizi Gratis (MBG) melalui Satuan Pelayanan Pemenuhan Gizi (SPPG) yang ternyata fiktif. Ia meminta Badan Gizi Nasional (BGN) memperketat mekanisme verifikasi agar kasus serupa tidak terulang.
@@ -35,3 +36,4 @@ Ia juga mendorong Badan Pemeriksa Keuangan (BPK) segera melakukan audit baik kin
 "Program MBG adalah investasi jangka panjang untuk masa depan bangsa, bukan proyek yang boleh dijadikan ajang bisnis. Setiap keterlambatan pembangunan dapur berarti keterlambatan pemenuhan gizi anak-anak Indonesia," ucap Nurhadi.
 
 "Keberhasilan program tidak boleh hanya diukur dari jumlah dapur terbangun, melainkan dari kualitas makanan yang benar-benar sampai ke meja anak-anak sekolah," imbuh dia.
+
