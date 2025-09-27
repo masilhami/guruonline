@@ -1,7 +1,7 @@
 <div class="nav-drop">
   <div class="nav-body">
-    {{- range site.Data.menu }}
-      <a href="{{ absURL .url }}" class="nav_item">{{ .item }}</a>
+    {{- range .Site.Menus.main }}
+      <a href="{{ .URL | absURL }}" class="nav_item">{{ .Name }}</a>
     {{- end }}
     <div class="nav-close"></div>
     {{- partialCached "mode" . }}
