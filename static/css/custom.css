@@ -1,20 +1,27 @@
 /* =======================================
-   REVISI AKHIR: Menyembunyikan Tombol Hamburger dan Memaksa Menu Desktop
+   Custom CSS untuk Tema Newsroom (guruonline.web.id)
+   - SOLUSI SPASI DAN NAVIGASI
    ======================================= */
 
-/* --- Bagian Logo (Tinggal copy dari yang terakhir) --- */
+/* --- Bagian 1: Kustomisasi Logo & Spasi (Final) --- */
+
+/* Menyesuaikan logo ke ukuran yang proporsional (70px) */
 header nav a img[src*="/images/logogo.png"] {
-    max-height: 70px !important; /* Ukuran yang sudah kita tentukan sebagai ideal */
+    max-height: 70px !important; 
     width: auto !important;
     height: auto !important;
 }
-/* Tambahkan margin bawah pada kontainer navigasi utama untuk spasi logo dan judul */
+
+/* 1. SOLUSI SPASI DENGAN KONTEN DI BAWAH */
+/* Menambahkan margin bawah pada kontainer navigasi utama untuk memisahkan dari konten */
 nav {
-    margin-bottom: 25px !important;
+    margin-bottom: 25px !important; /* Nilai 25px untuk spasi yang cukup */
+    padding-bottom: 15px !important; /* Pastikan ada padding di bawah nav */
 }
 
 
-/* --- Bagian Menu Navbar --- */
+/* --- Bagian 2: Kustomisasi Menu Navbar --- */
+
 @media (min-width: 992px) {
     /* A. Kontainer Navigasi Utama (Nav) */
     nav {
@@ -22,9 +29,8 @@ nav {
         justify-content: space-between; 
         align-items: center;
         padding-top: 15px;
-        padding-bottom: 15px;
         width: 100%;
-        margin-bottom: 0 !important; /* Hilangkan margin bawah agar menu sejajar */
+        margin-bottom: 0 !important; /* Margin bottom diatur di luar @media */
     }
     
     /* B. Memaksa Container Menu (.nav_bar-wrap) agar terlihat */
@@ -45,7 +51,7 @@ nav {
         flex-direction: row !important; 
     }
 
-    /* D. Mengatur Link dan Item */
+    /* D. Mengatur Item Menu dan Link */
     .nav_bar-wrap ul li {
         margin-left: 20px !important;  
     }
@@ -56,11 +62,21 @@ nav {
         text-transform: uppercase;
     }
     
-    /* E. SOLUSI FINAL UNTUK TOMBOL HAMBURGER (Menyembunyikan semua class yang mungkin) */
-    .nav_bar-wrap-icon, /* Class yang menghasilkan ikon garis-garis */
-    .nav_bar-wrap, /* Class yang juga bisa menjadi tombol/icon */
+    /* E. SOLUSI TOMBOL HAMBURGER HILANG: Pastikan tombol hamburger TIDAK HILANG di mobile */
+    /* Karena kita sedang di @media desktop, kita tetap sembunyikan hamburger */
+    .nav_bar-wrap-icon, 
     .menu-toggle-button,
     .menu-icon {  
+        display: none !important;
+    }
+}
+
+/* F. SOLUSI UNTUK LAYAR MOBILE/TABLET (Menghilangkan ikon garis yang rusak) */
+/* Selector ini seringkali merupakan sisa-sisa tombol hamburger mobile yang rusak */
+/* Kita sembunyikan sisa-sisa ikon yang ada di desktop */
+@media (max-width: 991px) {
+    /* Jika ada sisa ikon yang muncul di desktop, sembunyikan */
+    .nav-menu-icon-part, .broken-icon-part { 
         display: none !important;
     }
 }
