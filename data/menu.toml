@@ -53,10 +53,10 @@
     identifier = "tentang"
     name = "Tentang Kami"
     url = "/about/"
-    weight = 90 # Geser ke kanan
+    weight = 80 # Geser ke kanan
     
   [[menu.main]]
     identifier = "kontak"
     name = "Kontak"
     url = "/contact/"
-    weight = 100 # Geser paling kanan
+    weight = 90 # Geser paling kanan
