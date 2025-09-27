@@ -8,12 +8,22 @@
       <h1 class="post_title">{{ .Title }}</h1>
       
       <div class="post_meta_wrap" style="
-          font-size: 0.9em; 
-          color: #666; 
-          margin-top: -10px; 
-          margin-bottom: 25px; 
-          border-bottom: 1px solid #eee; 
-          padding-bottom: 15px;">
+    font-size: 0.9em; 
+    color: #666; 
+    margin-top: -10px; 
+    margin-bottom: 25px; 
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 15px;
+    display: flex; /* WAJIB: Mengaktifkan Flexbox untuk perataan */
+    justify-content: space-between;"> <p style="margin: 0;">
+        Oleh: <span style="color: #333; font-weight: bold;">{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</span> 
+        &middot; Jumlah Pembaca: <span id="page-views-counter" class="views-count" style="font-weight: bold; color: #cc0000;">999</span>
+    </p>
+    
+    <div class="share-area-inline">
+        {{ partial "share-buttons.html" . }}
+    </div>
+</div>
           
           <p style="margin: 0;">
               Oleh: <span style="color: #333; font-weight: bold;">{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</span> 
@@ -30,10 +40,7 @@
           {{ .Content }}
         </div>
         
-        <div class="share-area" style="margin-top: 30px;">
-            {{ partial "share-buttons.html" . }}
-        </div>
-        
+               
         <div class="post_extra mb-2"></div>
         
         <div>

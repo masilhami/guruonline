@@ -78,3 +78,21 @@ nav {
     text-align: right !important; /* Memastikan designed by rata kanan */
     margin: 0 !important;
 }
+
+/* --- Penyesuaian Style untuk Tombol Share Inline --- */
+
+/* Menghilangkan margin atas/bawah agar sejajar dengan teks metadata */
+.share-area-inline {
+    margin: 0;
+    padding: 0;
+}
+
+/* Memastikan tombol tampil inline di dalam container */
+.share-buttons {
+    display: flex; /* Membuat tombol berjejer */
+    align-items: center;
+    gap: 5px; /* Spasi antar tombol */
+    margin-top: 0 !important;
+    padding-top: 0 !important; 
+    border-top: none !important;
+}
