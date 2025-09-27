@@ -1,20 +1,60 @@
-baseurl = "https://guruonline.web.id" # Include trailing slash
-title = "Newsroom"
-# this example loads the theme as hugo module
-# comment out line below, and uncomment the line after it if you prefer to load the theme normally
-theme = [
-  "github.com/onweru/newsroom",
-] # edit this if you'ld rather use a fork of this repo
-# theme = "newsroom"
-author = "Weru"
-canonifyurls = true
-[pagination]
-disableAliases = false
-pagerSize = 10
-path = 'page'
+baseURL = "https://www.guruonline.web.id/"
+languageCode = "id-id"
+title = "Media Online Guru Indonesia"
+theme = "newsroom"
+disqusShortname = "guru-online" # Pastikan shortname Disqus Anda hanya "guru-online"
 
-[permalinks]
-pages = ':contentbasename/'
+[params]
+  logo = "/images/logogo.png"
 
-# If you want to use disqus, uncomment the line below
-# disqusShortname = "@disqus_zDuAHiZqBO"
+[menu]
+  # Menggunakan weight yang unik dan berurutan.
+  # Item dengan weight yang sama akan diurutkan berdasarkan alphabet.
+  
+  [[menu.main]]
+    identifier = "berita"
+    name = "Berita Terbaru"
+    url = "/posts/"
+    weight = 10 
+
+  [[menu.main]]
+    identifier = "artikel"
+    name = "Artikel Terbaru"
+    url = "/artikel/"
+    weight = 20
+    
+  [[menu.main]]
+    identifier = "opini"
+    name = "Opini Terbaru"
+    url = "/opini/"
+    weight = 30
+    
+  [[menu.main]]
+    identifier = "kurikulum"
+    name = "Bedah Kurikulum"
+    url = "/kurikulum/"
+    weight = 40
+    
+  [[menu.main]]
+    identifier = "panduan"
+    name = "Tutorial/Panduan"
+    url = "/panduan/"
+    weight = 50
+    
+  [[menu.main]]
+    identifier = "bank-soal" 
+    name = "Kumpulan Soal"
+    url = "/bank-soal/"
+    weight = 60
+    
+  [[menu.main]]
+    identifier = "tentang"
+    name = "Tentang Kami"
+    url = "/about/"
+    weight = 90
+    
+  [[menu.main]]
+    identifier = "kontak"
+    name = "Kontak"
+    url = "/contact/"
+    weight = 100
