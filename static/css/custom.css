@@ -1,28 +1,31 @@
 /* =======================================
    Custom CSS untuk Tema Newsroom (guruonline.web.id)
-   - SOLUSI FINAL LOGO DAN MENU
+   - SOLUSI AKHIR (SPASI & MENU NAVBAR)
    ======================================= */
 
-/* --- Bagian 1: Kustomisasi Logo (Penyesuaian Ukuran Ideal) --- */
+/* --- Bagian 1: Kustomisasi Logo & Spasi (Final) --- */
 
-/* Menyesuaikan logo ke ukuran yang proporsional (max-height: 70px) */
+/* Menyesuaikan logo ke ukuran yang proporsional (70px) */
 header nav a img[src*="/images/logogo.png"] {
-    /* Menurunkan ke ukuran ideal setelah penimpaan berhasil */
-    max-height: 70px !important; 
-    
-    /* Memastikan lebar meregang proporsional dan menimpa width="130px" bawaan HTML */
+    max-height: 60px !important; 
     width: auto !important;
     height: auto !important;
 }
 
-/* Selector tambahan (Biarkan tetap ada untuk kekuatan) */
+/* 1. MENGATASI SPASI JUDUL BERITA DAN LOGO */
+/* Tambahkan margin bawah pada kontainer navigasi utama */
+nav {
+    margin-bottom: 20px !important; /* Tambahkan ruang 20px di bawah logo */
+}
+
+/* 2. Target Tambahan (Biarkan tetap ada untuk kekuatan) */
 .nav-brand img, .header-logo img {
     max-height: 70px !important;
     width: auto !important;
 }
 
 
-/* --- Bagian 2: Kustomisasi Menu Navbar (Memperkuat Tampilan Desktop) --- */
+/* --- Bagian 2: Kustomisasi Menu Navbar (Memaksa Tampilan Desktop) --- */
 
 /* Breakpoint 992px standar untuk desktop. */
 @media (min-width: 992px) {
@@ -34,29 +37,30 @@ header nav a img[src*="/images/logogo.png"] {
         padding-top: 15px;
         padding-bottom: 15px;
         width: 100%;
+        /* Menghapus margin-bottom di sini karena sudah diatur di luar @media */
+        margin-bottom: 0 !important; 
     }
     
     /* B. Memaksa Container Menu (.nav_bar-wrap) agar terlihat */
     .nav_bar-wrap {  
-        display: flex !important;
+        /* Ini adalah class kontainer yang menyembunyikan menu. Kita paksa tampil */
+        display: flex !important; 
         justify-content: flex-end; 
         align-items: center;
         width: auto !important;  
-        position: relative !important; /* Wajib diubah dari fixed/absolute */
+        position: relative !important;
     }
-    
-    /* C. Menata Item Menu Individu (Solusi untuk tampilan item menu berjejer) */
-    /* Menargetkan UL/DIV menu yang ada di dalam .nav_bar-wrap */
-    .nav_bar-wrap ul { 
+
+    /* C. Menata Daftar Item Menu Individu (Solusi untuk tampilan item menu berjejer) */
+    .nav_bar-wrap ul {  /* Ini adalah daftar menu yang sudah Anda definisikan di hugo.toml */
         display: flex !important;
         list-style: none !important;  
         margin: 0 !important;
         padding: 0 !important;
-        /* Tambahkan ini untuk memastikan item sejajar */
         flex-direction: row !important; 
     }
 
-    /* D. Mengatur Link */
+    /* D. Mengatur Link dan Spasi */
     .nav_bar-wrap ul li {
         margin-left: 20px !important;  
     }
@@ -69,9 +73,8 @@ header nav a img[src*="/images/logogo.png"] {
     }
     
     /* E. Menyembunyikan Tombol Hamburger di Desktop */
-    .nav_bar-wrap .menu-toggle-button,
-    .menu-icon,
-    .nav_bar-wrap-icon {  
+    /* Ini menargetkan tombol hamburger yang berada di dalam nav_bar-wrap */
+    .nav_bar-wrap-wrap, .menu-toggle-button, .menu-icon {  
         display: none !important;
     }
 }
