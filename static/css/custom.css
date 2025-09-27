@@ -1,66 +1,68 @@
 /* =======================================
    Custom CSS untuk Tema Newsroom (guruonline.web.id)
-   - Revisi Akhir Logo dan Menu
+   - Solusi Akhir untuk Logo dan Navbar
    ======================================= */
 
-/* --- Bagian 1: Kustomisasi Logo (Tinggi Ekstrem) --- */
+/* --- Bagian 1: Solusi Logo (Tinggi Maksimal 150px) --- */
 
-/* SOLUSI LOGO: Mengatasi logo lebar dengan memaksa TINGGI MAXIMAL 
-   Menargetkan elemen IMG dengan attribut SRC untuk kekuatan tertinggi. */
+/* Menargetkan logo secara spesifik dengan kekuatan tinggi */
 header nav a img[src*="/images/logogo.png"] {
-    /* Meningkatkan tinggi maksimal secara ekstrem untuk menimpa semua aturan tema */
+    /* Mendorong tinggi logo secara ekstrem untuk menimpa CSS tema */
     max-height: 150px !important; 
     
-    /* Memastikan lebar meregang proporsional dan menimpa width="130px" bawaan */
+    /* Memastikan lebar logo meregang proporsional, menimpa width="130px" bawaan HTML */
     width: auto !important;
     height: auto !important;
 }
 
 
-/* --- Bagian 2: Kustomisasi Menu Navbar (Menampilkan di Desktop) --- */
+/* --- Bagian 2: Solusi Menu Navbar (Menampilkan di Desktop) --- */
 
-/* Breakpoint 992px standar untuk desktop. */
+/* Aturan ini hanya berlaku untuk layar desktop (lebar minimal 992px) */
 @media (min-width: 992px) {
-    /* A. Memaksa Kontainer Navigasi (Nav) agar terlihat rapi */
+    /* A. Kontainer Navigasi Utama (tag <nav>) */
     nav {
         display: flex !important;
         justify-content: space-between; /* Pisahkan logo dan menu */
         align-items: center;
-        padding-top: 10px; /* Memberi ruang di atas logo */
-        padding-bottom: 10px;
+        /* Padding untuk memberi ruang di sekitar logo */
+        padding-top: 15px; 
+        padding-bottom: 15px;
+        width: 100%;
     }
     
-    /* B. Memaksa Container Menu Utama (.nav_bar-wrap) agar terlihat */
+    /* B. Kontainer Menu Utama (.nav_bar-wrap) - Memaksa agar terlihat */
     .nav_bar-wrap {  
         display: flex !important;
-        justify-content: flex-end; 
+        justify-content: flex-end; /* Menu di sebelah kanan */
         align-items: center;
         width: auto !important;  
+        position: relative !important; /* Hilangkan posisi mobile */
     }
     
-    /* C. Menata Item Menu Individu */
+    /* C. Menata Daftar Item Menu (ul) */
     .nav_bar-wrap ul { 
         display: flex !important;
-        list-style: none !important; 
+        list-style: none !important;  /* Hapus bullet point */
         margin: 0 !important;
         padding: 0 !important;
     }
 
-    /* D. Mengatur Spasi dan Gaya Link */
+    /* D. Mengatur Item Menu dan Tautan */
     .nav_bar-wrap ul li {
         margin-left: 20px !important; 
     }
 
     .nav_bar-wrap ul li a {
-        color: #333 !important; 
+        color: #333 !important;  
         text-decoration: none !important; 
         font-weight: bold !important;
         text-transform: uppercase;
     }
     
     /* E. Menyembunyikan Tombol Hamburger di Desktop */
-    .menu-toggle-button,
-    .menu-icon {  
+    .nav_bar-wrap .menu-toggle-button,
+    .nav_bar-wrap .menu-icon {  
         display: none !important;
     }
 }
