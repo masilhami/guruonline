@@ -3,27 +3,26 @@
    - SOLUSI FINAL LOGO DAN MENU
    ======================================= */
 
-/* --- Bagian 1: Kustomisasi Logo (Tinggi Ekstrem) --- */
+/* --- Bagian 1: Kustomisasi Logo (Penyesuaian Ukuran Ideal) --- */
 
-/* 1. Target Logo Secara Langsung (Solusi Paling Kuat) */
-/* Menimpa semua aturan bawaan tema Newsroom */
+/* Menyesuaikan logo ke ukuran yang proporsional (max-height: 70px) */
 header nav a img[src*="/images/logogo.png"] {
-    /* Menaikkan tinggi maksimal ke nilai ekstrem 150px! */
-    max-height: 150px !important; 
+    /* Menurunkan ke ukuran ideal setelah penimpaan berhasil */
+    max-height: 70px !important; 
     
     /* Memastikan lebar meregang proporsional dan menimpa width="130px" bawaan HTML */
     width: auto !important;
     height: auto !important;
 }
 
-/* 2. Target Tambahan (Jika Tema menggunakan class .brand) */
+/* Selector tambahan (Biarkan tetap ada untuk kekuatan) */
 .nav-brand img, .header-logo img {
-    max-height: 150px !important;
+    max-height: 70px !important;
     width: auto !important;
 }
 
 
-/* --- Bagian 2: Kustomisasi Menu Navbar (Menampilkan di Desktop) --- */
+/* --- Bagian 2: Kustomisasi Menu Navbar (Memperkuat Tampilan Desktop) --- */
 
 /* Breakpoint 992px standar untuk desktop. */
 @media (min-width: 992px) {
@@ -37,38 +36,42 @@ header nav a img[src*="/images/logogo.png"] {
         width: 100%;
     }
     
-    /* B. Memaksa Container Menu Utama (.nav_bar-wrap) agar terlihat */
+    /* B. Memaksa Container Menu (.nav_bar-wrap) agar terlihat */
     .nav_bar-wrap {  
         display: flex !important;
         justify-content: flex-end; 
         align-items: center;
         width: auto !important;  
-        position: relative !important;
+        position: relative !important; /* Wajib diubah dari fixed/absolute */
     }
     
-    /* C. Menata Item Menu Individu */
+    /* C. Menata Item Menu Individu (Solusi untuk tampilan item menu berjejer) */
+    /* Menargetkan UL/DIV menu yang ada di dalam .nav_bar-wrap */
     .nav_bar-wrap ul { 
         display: flex !important;
         list-style: none !important;  
         margin: 0 !important;
         padding: 0 !important;
+        /* Tambahkan ini untuk memastikan item sejajar */
+        flex-direction: row !important; 
     }
 
-    /* D. Mengatur Spasi dan Gaya Link */
+    /* D. Mengatur Link */
     .nav_bar-wrap ul li {
-        margin-left: 20px !important; 
+        margin-left: 20px !important;  
     }
 
     .nav_bar-wrap ul li a {
         color: #333 !important;  
-        text-decoration: none !important; 
+        text-decoration: none !important;  
         font-weight: bold !important;
         text-transform: uppercase;
     }
     
     /* E. Menyembunyikan Tombol Hamburger di Desktop */
-    .menu-toggle-button,
-    .menu-icon {  
+    .nav_bar-wrap .menu-toggle-button,
+    .menu-icon,
+    .nav_bar-wrap-icon {  
         display: none !important;
     }
 }
