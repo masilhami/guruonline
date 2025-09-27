@@ -1,72 +1,71 @@
 /* =======================================
    Custom CSS untuk Tema Newsroom (guruonline.web.id)
+   - Diimplementasikan di: static/css/custom.css
    ======================================= */
 
-/* --- Bagian 1: Kustomisasi Logo --- */
+/* --- Bagian 1: Kustomisasi Logo (Prioritas Tinggi) --- */
 
-/* Menargetkan gambar logo secara spesifik dengan path-nya */
-/* Ini akan menimpa atribut width="130px" yang ada di HTML */
+/* **SOLUSI LOGO:** Mengatasi logo lebar dengan memaksa TINGGI MAXIMAL dan menimpa lebar bawaan (width: 130px) */
 header nav a img[src*="/images/logogo.png"] {
-    width: 150px !important;    /* Atur lebar yang Anda inginkan (misal: 150px) */
-    max-height: 70px !important; /* Atur tinggi maksimal agar tidak merusak tata letak */
-    height: auto !important;     /* Pertahankan rasio aspek gambar */
-}
-
-/* Jika tema menggunakan ID atau Class yang lebih umum untuk logo di dalam header,
-   Anda bisa menggunakan ini sebagai alternatif atau tambahan:
-.site-branding img {
-    width: 150px !important;
-    max-height: 70px !important;
+    /* Set Tinggi Maksimal 80px agar logo Anda terlihat besar dan jelas */
+    max-height: 80px !important; 
+    
+    /* Memastikan lebar meregang proporsional dan menimpa inline-style */
+    width: auto !important;
     height: auto !important;
 }
-*/
 
 
 /* --- Bagian 2: Kustomisasi Menu Navbar --- */
 
 /* Ini untuk memastikan menu selalu terlihat di desktop (non-mobile) */
-/* Sesuaikan breakpoint (992px) jika tema Newsroom menggunakan angka yang berbeda */
+/* Breakpoint 992px adalah standar. */
 @media (min-width: 992px) {
-    /* Menargetkan container menu utama */
-    .nav_bar-wrap { /* Ini adalah class container <nav> Anda dari inspeksi HTML */
-        display: flex !important; /* Memaksa tampilan flexbox untuk item menu */
-        justify-content: flex-end; /* Menggeser menu ke kanan */
-        align-items: center;
-        width: auto !important; /* Memastikan navbar mengambil lebar yang dibutuhkan */
-    }
-
-    /* Ini menargetkan daftar item menu jika ada */
-    .nav_bar-wrap ul.menu { /* Ganti 'ul.menu' jika class menu Anda berbeda */
+    /* A. Memaksa Kontainer Navigasi (Logo & Menu) untuk Tampil Rapi */
+    /* Berdasarkan inspeksi, ini adalah tag <nav> yang membungkus semua */
+    nav {
         display: flex !important;
-        list-style: none !important; /* Hapus bullet point */
+        justify-content: space-between; /* Pisahkan logo dan menu */
+        align-items: center;
+    }
+    
+    /* B. Memaksa Container Menu Utama (nav_bar-wrap) agar terlihat */
+    .nav_bar-wrap { 
+        display: flex !important;
+        /* Ganti flex-end jika Anda ingin menu rata kiri */
+        justify-content: flex-end; 
+        align-items: center;
+        width: auto !important; 
+    }
+    
+    /* C. Menata Item Menu Individu */
+    .nav_bar-wrap ul { /* Menargetkan daftar menu */
+        display: flex !important;
+        list-style: none !important; 
         margin: 0 !important;
         padding: 0 !important;
     }
 
-    /* Menata item menu individu */
-    .nav_bar-wrap ul.menu li {
-        margin-left: 20px !important; /* Spasi antar item menu */
+    /* D. Mengatur Spasi dan Gaya Link */
+    .nav_bar-wrap ul li {
+        margin-left: 20px !important; 
     }
 
-    /* Mengatur link menu */
-    .nav_bar-wrap ul.menu li a {
-        color: #333 !important; /* Warna teks menu */
-        text-decoration: none !important; /* Hapus garis bawah */
-        font-weight: bold !important; /* Bold teks menu */
+    .nav_bar-wrap ul li a {
+        color: #333 !important; 
+        text-decoration: none !important; 
+        font-weight: bold !important;
+        text-transform: uppercase;
     }
-
-    /* Jika ada tombol hamburger (toggle menu) di desktop, sembunyikan */
-    .menu-toggle-button { /* Ganti dengan class tombol hamburger yang benar */
+    
+    /* E. Menyembunyikan Tombol Hamburger di Desktop */
+    .menu-toggle-button,
+    .menu-icon { 
         display: none !important;
     }
 }
 
 /* --- Bagian 3: Contoh Font Global (Opsional) --- */
 /* body {
-    font-family: Arial, sans-serif !important;
-} */
-
-/* --- Bagian 4: Contoh Warna Teks Global (Opsional) --- */
-/* p {
-    color: #444 !important;
+    font-family: 'Arial', sans-serif !important;
 } */
