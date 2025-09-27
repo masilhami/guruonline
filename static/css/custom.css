@@ -1,0 +1,5 @@
+/* Mengatasi ukuran logo yang terlalu kecil */
+header .logo img {
+    max-height: 50px !important; /* Ganti dengan ukuran yang Anda inginkan */
+    width: auto !important;
+}
