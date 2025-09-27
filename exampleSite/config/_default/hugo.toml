@@ -7,6 +7,18 @@ disqusShortname = "guru-online"
 [params]
   logo = "/images/logogo.png"
  
+ [permalinks]
+pages = ':contentbasename/'
+
+# edit this if you'ld rather use a fork of this repo
+# theme = "newsroom"
+author = "Weru"
+canonifyurls = true
+[pagination]
+disableAliases = false
+pagerSize = 10
+path = 'page'
+ 
 [menu]
   [[menu.main]]
     identifier = "berita"
