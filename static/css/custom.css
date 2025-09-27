@@ -1,64 +1,70 @@
 /* =======================================
-   Custom CSS untuk Tema Newsroom (guruonline.web.id)
-   - REVISI AKHIR: FOKUS PADA LOGO DAN SPASI
+   Perbaikan Akhir CSS (Logo, Spasi, dan Menu Desktop)
    ======================================= */
 
-/* --- Bagian 1: Kustomisasi Logo & Spasi (Final) --- */
+/* --- Bagian 1: Logo & Spasi --- */
 
-/* Menyesuaikan logo ke ukuran yang proporsional (70px) */
-header nav a img[src*="/images/logogo.png"] {
+/* Mengatasi width="130px" di header.html dan menetapkan ukuran ideal */
+header nav a img {
     max-height: 60px !important; 
-    width: auto !important;
+    width: auto !important; /* Wajib menimpa 130px */
     height: auto !important;
 }
 
-/* 1. Solusi Spasi dengan Konten di bawah */
+/* Spasi di bawah header */
 header {
-    margin-bottom: 30px !important; /* Spasi yang cukup lega */
+    margin-bottom: 30px !important; 
 }
 
-/* 2. Menghilangkan sisa-sisa margin/padding yang menumpuk */
-nav {
-    padding-bottom: 0 !important;
-}
+/* --- Bagian 2: Memperbaiki Tampilan Menu Desktop --- */
 
-
-/* --- Bagian 2: Memperbaiki Ikon Hamburger dan Menyembunyikan Toggle --- */
-
-/* 1. Menyembunyikan Toggle Dark Mode (yang muncul di kanan atas) */
-.toggle-switch-container {
-    display: none !important;
-}
-
-/* 2. Memperbaiki Ikon Hamburger yang Rusak */
-/* Menargetkan container ikon yang mungkin memiliki overflow atau padding yang salah */
-.nav_bar-wrap { 
-    /* Pastikan ikon memiliki ruang yang cukup dan terlihat normal */
-    height: 30px !important; 
-    width: 30px !important;
-    padding: 0 !important;
-}
-
-/* 3. Menyembunyikan elemen yang merusak ikon di desktop (jika ada) */
 @media (min-width: 992px) {
-    .nav-body { /* Menghilangkan efek mobile full screen di desktop */
-        transition: none !important; 
+    
+    /* 1. Menyembunyikan Ikon Mobile Toggle yang Rusak */
+    .nav_bar-wrap { 
+        display: none !important; /* Menyembunyikan ikon hamburger yang Anda lihat */
     }
     
-    /* Mengatasi ikon yang rusak dengan menyetel ulang container ikon mobile */
-    .nav_bar-wrap {
-        /* Kemungkinan ikon rusak adalah sisa dari ::before dan ::after. */
-        /* Biarkan saja. Fokus pada logo dan spasi. */
+    /* 2. Memaksa Tampilan Menu Horizontal (Menggunakan .nav-body) */
+    .nav-body {
+        /* Memastikan menu tampil dan menghilangkan properti mobile */
+        display: flex !important;
+        opacity: 1 !important;
+        position: relative !important;
+        background: none !important;
+        width: auto !important;
+        min-height: auto !important;
+        padding: 0 !important;
+        z-index: auto !important;
+        top: auto !important;
+        right: auto !important;
         
-        /* Menyembunyikan ikon yang muncul di desktop agar tidak mengganggu */
+        /* Gaya horizontal */
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    /* 3. Menata Link Menu */
+    .nav-body a.nav_item { /* Menargetkan setiap link menu */
+        margin-left: 20px !important;
+        padding: 0 !important;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #333 !important;
+        display: block !important;
+    }
+    
+    /* 4. Menghilangkan Close Button dan Dark Mode Toggle di Desktop */
+    .nav-close, .color_mode {
         display: none !important;
     }
     
-    /* Memastikan logo dan nama menu tersisa tetap sejajar */
-    nav {
+    /* 5. Mengatur Layout Header */
+    .nav-menu {
         display: flex !important;
-        justify-content: space-between; 
-        align-items: center;
+        justify-content: space-between !important;
+        align-items: center !important;
         width: 100%;
     }
 }

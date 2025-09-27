@@ -1,0 +1,12 @@
+# File: data/menu.toml
+[[main]]
+  url = "/posts/"
+  item = "Berita Terbaru"
+  weight = 10
+
+[[main]]
+  url = "/about/"
+  item = "Tentang Kami"
+  weight = 20
+
+# ... Lanjutkan dengan semua menu Anda yang lain
