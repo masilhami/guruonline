@@ -1,6 +1,6 @@
 /* =======================================
    Custom CSS untuk Tema Newsroom (guruonline.web.id)
-   - REVISI AKHIR: MEMPERTAHANKAN ICON HAMBURGER
+   - REVISI AKHIR: MEMULIHKAN ICON HAMBURGER
    ======================================= */
 
 /* --- Bagian 1: Kustomisasi Logo & Spasi (Final) --- */
@@ -12,12 +12,12 @@ header nav a img[src*="/images/logogo.png"] {
     height: auto !important;
 }
 
-/* Solusi Spasi dengan Konten di bawah */
+/* 1. Solusi Spasi dengan Konten di bawah */
 header {
     margin-bottom: 30px !important; /* Spasi yang cukup lega */
 }
 
-/* Mengatur agar logo dan ikon sejajar */
+/* 2. Mengatur nav agar logo dan ikon sejajar */
 @media (min-width: 992px) {
     nav {
         display: flex !important;
@@ -28,18 +28,13 @@ header {
     }
 }
 
+/* --- Bagian 2: Memulihkan Tombol Hamburger --- */
 
-/* --- Bagian 2: Menghilangkan Konflik Tampilan --- */
-
-/* Menghilangkan semua aturan yang menyembunyikan tombol hamburger */
-.nav_bar-wrap-icon, 
-.menu-toggle-button,
-.menu-icon {  
-    /* Hapus display: none !important dari sini */
-    /* Kita biarkan fungsi mobile theme bawaan bekerja */
-}
-
-/* Hanya menyembunyikan toggle dark mode yang mengganggu */
-.color_mode {
+/* Kita HANYA akan menyembunyikan Toggle Dark Mode yang mengganggu */
+.color_mode, 
+.toggle-switch-container {
     display: none !important;
 }
+
+/* HAPUS SEMUA KODE BERBAHAYA YANG MENYEMBUNYIKAN .nav_bar-wrap atau .menu-icon. 
+   Dengan tidak adanya kode penyembunyi, ikon akan kembali ke fungsi bawaannya. */
