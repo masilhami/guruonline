@@ -1,9 +1,9 @@
 /* =======================================
    Custom CSS untuk Tema Newsroom (guruonline.web.id)
-   - SOLUSI AKHIR (SPASI & TAMPILAN MENU)
+   - SOLUSI AKHIR DAN LENGKAP
    ======================================= */
 
-/* --- Bagian 1: Kustomisasi Logo & Spasi (Final) --- */
+/* --- Bagian 1: Kustomisasi Logo & Spasi --- */
 
 /* Menyesuaikan logo ke ukuran yang proporsional (70px) */
 header nav a img[src*="/images/logogo.png"] {
@@ -12,71 +12,76 @@ header nav a img[src*="/images/logogo.png"] {
     height: auto !important;
 }
 
-/* 1. SOLUSI SPASI DENGAN KONTEN DI BAWAH */
+/* Solusi Spasi: Menambahkan margin bawah pada kontainer header */
 header {
-    margin-bottom: 40px !important; /* Spasi yang cukup lega */
+    margin-bottom: 40px !important; 
 }
 nav {
     padding-bottom: 0 !important;
+}
+.nav-brand img, .header-logo img {
+    max-height: 70px !important;
+    width: auto !important;
 }
 
 
 /* --- Bagian 2: Kustomisasi Menu Navbar (Memaksa Tampilan Desktop) --- */
 
 @media (min-width: 992px) {
-    /* A. Kontainer Navigasi Utama (Nav) */
+    
+    /* A. MEMAKSA CONTAINER MENU UTAMA (.nav-body) AGAR TERLIHAT HORIZONTAL */
+    .nav-body {
+        /* Mengalahkan style mobile yang membuat menu hilang/fixed */
+        opacity: 1 !important; 
+        position: relative !important; 
+        right: auto !important;
+        top: auto !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        min-height: auto !important;
+        width: auto !important;
+        padding: 0 !important;
+        transition: none !important; /* Nonaktifkan transisi mobile */
+    }
+    
+    /* B. Memaksa Container Navigasi (Nav) agar terlihat rapi */
     nav {
         display: flex !important;
         justify-content: space-between; 
         align-items: center;
-        padding-top: 15px;
-        padding-bottom: 15px;
         width: 100%;
-        margin-bottom: 0 !important;
     }
     
-    /* B. Memaksa Container Menu (.nav_bar-wrap) agar terlihat */
-    .nav_bar-wrap {  
-        display: flex !important; 
-        position: relative !important;
-        justify-content: flex-end; 
-        align-items: center;
-        width: auto !important;  
-    }
-    
-    /* C. SOLUSI MENU: Memaksa Daftar UL (Unordered List) Menu Tampil Berjejer */
-    /* Tambahkan selector kuat untuk daftar menu yang berisi tautan Anda */
-    .nav-body ul { /* Menargetkan daftar menu jika ada class nav-body */
-        display: flex !important; 
+    /* C. Memaksa Daftar UL Tampil Berjejer */
+    .nav-body ul { 
+        display: flex !important;
+        flex-direction: row !important; /* Wajib: Tampil berjejer ke samping */
         list-style: none !important;
         margin: 0 !important;
         padding: 0 !important;
-        flex-direction: row !important;
-    }
-    
-    /* Tambahan: Pastikan semua turunan li dan a di dalam ul juga terlihat */
-    .nav-body ul li {
-        display: block !important;
-    }
-    .nav-body ul li a {
-        display: block !important;
     }
     
     /* D. Mengatur Item Menu dan Link */
-    .nav_bar-wrap ul li {
+    .nav-body ul li {
+        display: block !important;
         margin-left: 20px !important;  
+        margin-right: 0 !important;
     }
-    .nav_bar-wrap ul li a {
+    .nav-body ul li a {
         color: #333 !important;  
         text-decoration: none !important;  
         font-weight: bold !important;
         text-transform: uppercase;
+        padding: 0 !important; /* Hapus padding mobile */
     }
     
-    /* E. Menyembunyikan Ikon yang Rusak di Desktop */
+    /* E. MENYEMBUNYIKAN IKON HAMBURGER RUSAK DI DESKTOP */
+    /* Targetkan semua class yang terkait dengan ikon mobile */
+    .nav_bar-wrap, 
     .nav_bar-wrap-icon, 
     .menu-toggle-button,
-    .menu-icon {  
+    .menu-icon,
+    .nav-close {  
         display: none !important;
     }
 }
